@@ -1,4 +1,17 @@
 package com.doitteam.foodstore.dto.request;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
 
-public class UpdateUserRequest {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+class UpdateUserRequest {
+    private String fullName;
+    private String phone;
+    private String address;
 }

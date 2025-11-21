@@ -1,4 +1,22 @@
 package com.doitteam.foodstore.dto.response;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import jakarta.validation.constraints.*;
+import java.math.BigDecimal;
+import java.time.LocalDateTime;
+import java.util.List;
 
-public class CartItemResponse {
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
+class CartItemResponse {
+    private Long id;
+    private Long productId;
+    private String productName;
+    private String productImage;
+    private BigDecimal price;
+    private Integer quantity;
+    private BigDecimal subtotal;
+    private Integer availableStock;
 }
