@@ -1,10 +1,8 @@
 package com.doitteam.foodstore.service;
 
-import com.doitteam.foodstore.dto.*;
 import com.doitteam.foodstore.dto.response.*;
 import com.doitteam.foodstore.dto.request.*;
 import com.doitteam.foodstore.exception.BadRequestException;
-import com.doitteam.foodstore.exception.UnauthorizedException;
 import com.doitteam.foodstore.model.User;
 import com.doitteam.foodstore.model.Cart;
 import com.doitteam.foodstore.model.enums.Role;
