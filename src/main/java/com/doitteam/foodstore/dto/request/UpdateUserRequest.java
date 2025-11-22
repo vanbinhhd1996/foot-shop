@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class UpdateUserRequest {
+public class UpdateUserRequest {
     private String fullName;
     private String phone;
     private String address;

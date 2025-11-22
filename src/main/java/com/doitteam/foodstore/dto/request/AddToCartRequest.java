@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class AddToCartRequest {
+public class AddToCartRequest {
     @NotNull(message = "Product ID is required")
     private Long productId;
 

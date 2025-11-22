@@ -46,6 +46,9 @@ public class Order {
     @Column(name = "payment_status", nullable = false)
     private PaymentStatus paymentStatus = PaymentStatus.PENDING;
 
+    @Column(name = "shipping_name", nullable = false, columnDefinition = "TEXT")
+    private String shippingName;
+
     @Column(name = "shipping_address", nullable = false, columnDefinition = "TEXT")
     private String shippingAddress;
 

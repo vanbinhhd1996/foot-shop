@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class ProductRequest {
+public class ProductRequest {
     @NotNull(message = "Category ID is required")
     private Long categoryId;
 

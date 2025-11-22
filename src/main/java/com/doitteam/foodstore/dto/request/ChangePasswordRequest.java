@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class ChangePasswordRequest {
+public class ChangePasswordRequest {
     @NotBlank(message = "Old password is required")
     private String oldPassword;
 

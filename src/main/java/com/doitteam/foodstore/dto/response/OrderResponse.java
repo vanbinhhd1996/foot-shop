@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class OrderResponse {
+public class OrderResponse {
     private Long id;
     private String orderNumber;
     private BigDecimal totalAmount;

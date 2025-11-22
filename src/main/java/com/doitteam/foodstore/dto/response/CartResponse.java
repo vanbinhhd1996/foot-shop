@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CartResponse {
+public class CartResponse {
     private Long id;
     private List<CartItemResponse> items;
     private BigDecimal totalAmount;

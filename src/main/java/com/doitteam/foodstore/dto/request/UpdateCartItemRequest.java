@@ -11,7 +11,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class UpdateCartItemRequest {
+public class UpdateCartItemRequest {
     @Min(value = 1)
     private Integer quantity;
 }

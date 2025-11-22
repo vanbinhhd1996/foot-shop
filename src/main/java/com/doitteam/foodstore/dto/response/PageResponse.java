@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class PageResponse<T> {
+public class PageResponse<T> {
     private List<T> content;
     private Integer pageNumber;
     private Integer pageSize;

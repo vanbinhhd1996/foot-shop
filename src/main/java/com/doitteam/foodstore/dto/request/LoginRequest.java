@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class LoginRequest {
+public class LoginRequest {
     @NotBlank(message = "Username is required")
     private String username;
 

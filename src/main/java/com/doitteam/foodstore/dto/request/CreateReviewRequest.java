@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CreateReviewRequest {
+public class CreateReviewRequest {
     @NotNull(message = "Product ID is required")
     private Long productId;
 

@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class CreateOrderRequest {
+public class CreateOrderRequest {
     @NotBlank(message = "Shipping name is required")
     private String shippingName;
 

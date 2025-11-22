@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class ProductListResponse {
+public class ProductListResponse {
     private Long id;
     private String name;
     private BigDecimal price;

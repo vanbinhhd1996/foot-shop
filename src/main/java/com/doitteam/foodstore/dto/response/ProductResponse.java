@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class ProductResponse {
+public class ProductResponse {
     private Long id;
     private Long categoryId;
     private String categoryName;

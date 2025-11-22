@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class UpdateOrderStatusRequest {
+public class UpdateOrderStatusRequest {
     @NotBlank(message = "Status is required")
     private String status;
 

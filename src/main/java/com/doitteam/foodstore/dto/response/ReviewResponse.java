@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class ReviewResponse {
+public class ReviewResponse {
     private Long id;
     private Long productId;
     private Long userId;

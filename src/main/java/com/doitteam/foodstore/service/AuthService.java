@@ -3,6 +3,7 @@ package com.doitteam.foodstore.service;
 import com.doitteam.foodstore.dto.response.*;
 import com.doitteam.foodstore.dto.request.*;
 import com.doitteam.foodstore.exception.BadRequestException;
+import com.doitteam.foodstore.exception.UnauthorizedException;
 import com.doitteam.foodstore.model.User;
 import com.doitteam.foodstore.model.Cart;
 import com.doitteam.foodstore.model.enums.Role;
@@ -55,6 +56,26 @@ public class AuthService {
                 savedUser.getFullName(),
                 savedUser.getRole().name(),
                 "Registration successful"
+        );
+    }
+
+    public AuthResponse login(LoginRequest request) {
+        User user = userRepository.findByUsername(request.getUsername())
+                .orElseThrow(() -> new UnauthorizedException("Invalid username or password"));
+
+        if (!user.getPassword().equals(request.getPassword())) {
+            throw new UnauthorizedException("Invalid username or password");
+        }
+
+        log.info("User logged in successfully: {}", user.getUsername());
+
+        return new AuthResponse(
+                user.getId(),
+                user.getUsername(),
+                user.getEmail(),
+                user.getFullName(),
+                user.getRole().name(),
+                "Login successful"
         );
     }
 }

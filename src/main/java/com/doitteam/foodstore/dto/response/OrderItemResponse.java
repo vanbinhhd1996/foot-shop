@@ -10,7 +10,7 @@ import java.util.List;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-class OrderItemResponse {
+public class OrderItemResponse {
     private Long id;
     private Long productId;
     private String productName;
