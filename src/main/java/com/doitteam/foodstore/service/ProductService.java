@@ -34,9 +34,15 @@ public class ProductService {
     }
 
     public List<ProductListResponse> getProductsByCategory(Long categoryId) {
-        return productRepository.findActiveByCategoryId(categoryId).stream()
+        if (categoryId == 1 || categoryId == 2){
+            List<Integer> categoryIds = categoryId == 1 ? List.of(9, 10 ,11): List.of(12, 13, 14, 15, 16);
+            return productRepository.findByCategoryIds(categoryIds).stream()
+                    .map(this::mapToProductListResponse)
+                    .collect(Collectors.toList());
+        }else return productRepository.findActiveByCategoryId(categoryId).stream()
                 .map(this::mapToProductListResponse)
                 .collect(Collectors.toList());
+
     }
 
     public List<ProductListResponse> searchProducts(String keyword) {

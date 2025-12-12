@@ -34,4 +34,10 @@ public interface ProductRepository extends JpaRepository<Product, Long> {
 
     @Query("SELECT p FROM Product p WHERE p.isActive = true ORDER BY p.createdAt DESC")
     List<Product> findLatestProducts();
+
+    @Query(
+               value = "SELECT * FROM products WHERE category_id IN :categoryIds",
+               nativeQuery = true
+    )
+    List<Product> findByCategoryIds(@Param("categoryIds")List<Integer> categoryIds);
 }

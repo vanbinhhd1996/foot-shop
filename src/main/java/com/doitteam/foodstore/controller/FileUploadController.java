@@ -22,7 +22,7 @@ import java.util.Map;
 @RestController
 @RequestMapping("/files")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", maxAge = 3600)
+//@CrossOrigin(origins = "*", maxAge = 3600)
 @Slf4j
 public class FileUploadController {
 
@@ -32,8 +32,7 @@ public class FileUploadController {
      * 単一ファイルアップロード
      */
     @PostMapping("/upload")
-    public ResponseEntity<ApiResponse<Map<String, String>>> uploadFile(
-            @RequestParam("file") MultipartFile file) {
+    public ResponseEntity<ApiResponse<Map<String, String>>> uploadFile(@RequestParam("file") MultipartFile file) {
 
         log.info("ファイルアップロードリクエスト: {}", file.getOriginalFilename());
 
@@ -53,8 +52,7 @@ public class FileUploadController {
      * 複数ファイルアップロード
      */
     @PostMapping("/upload-multiple")
-    public ResponseEntity<ApiResponse<Map<String, Object>>> uploadMultipleFiles(
-            @RequestParam("files") MultipartFile[] files) {
+    public ResponseEntity<ApiResponse<Map<String, Object>>> uploadMultipleFiles(@RequestParam("files") MultipartFile[] files) {
 
         log.info("複数ファイルアップロードリクエスト: {} files", files.length);
 
@@ -71,9 +69,7 @@ public class FileUploadController {
      * ファイルダウンロード
      */
     @GetMapping("/{filename:.+}")
-    public ResponseEntity<Resource> downloadFile(
-            @PathVariable String filename,
-            HttpServletRequest request) {
+    public ResponseEntity<Resource> downloadFile(@PathVariable String filename, HttpServletRequest request) {
 
         try {
             Path filePath = fileStorageService.getFilePath(filename);

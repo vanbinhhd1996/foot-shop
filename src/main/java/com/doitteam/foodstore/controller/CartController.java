@@ -12,7 +12,7 @@ import jakarta.validation.Valid;
 @RestController
 @RequestMapping("/cart")
 @RequiredArgsConstructor
-@CrossOrigin(origins = "*", maxAge = 3600)
+////@CrossOrigin(origins = "*", maxAge = 3600)
 public class CartController {
 
     private final CartService cartService;
